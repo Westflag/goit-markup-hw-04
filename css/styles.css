@@ -75,6 +75,7 @@ img {
 
 .footer-container-socials p {
     margin-bottom: 16px;
+    color: var(--color-white-background);
 }
 
 .footer-socials-list {
@@ -104,7 +105,7 @@ img {
 .footer-social-link:hover,
 .footer-social-link:focus,
 .footer-social-link:active {
-    background-color: var(--color-pressed-state);
+    background-color: var(--color-success);
 }
 
 .footer-socials-list .footer-social-link:first-child {
@@ -323,6 +324,13 @@ img {
 .team-social-link:hover,
 .team-social-link:focus,
 .team-social-link:active {
+    background-color: var(--color-pressed-state);
+}
+
+
+.team-social-item a:hover,
+.team-social-item a:focus,
+.team-social-item a:active {
     background-color: var(--color-pressed-state);
 }
 
