@@ -183,7 +183,6 @@ img {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .section-order-container {
@@ -273,7 +272,8 @@ img {
     background-color: var(--color-pressed-state);
 }
 
-.team-social-link:focus {
+.team-social-link:focus,
+.team-social-link:active {
     background-color: var(--color-pressed-state);
 }
 
@@ -306,6 +306,35 @@ img {
     row-gap: 48px;
 }
 
+.project-item:hover {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.project-list .project-item:first-child {
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-image-description {
+    position: absolute;
+    top: 0;
+    color: var(--color-light);
+    padding: 40px 32px;
+    background-color: var(--color-primary-brand);
+    height: 100%;
+    width: 100%;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-item:hover .project-image-description {
+    transform: translateY(0%);
+}
+
 .project-item-content {
     padding: 32px 16px;
     border: 1px solid var(--color-accent);
@@ -330,6 +359,7 @@ img {
     color: var(--color-white-background);
     background-color: var(--color-primary-brand);
     cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button:hover {
